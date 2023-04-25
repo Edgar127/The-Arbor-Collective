@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Store</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Fxo7Hwy07yMI6vNLJL-YXIFjTnE9kZc&libraries=places"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Fxo7Hwy07yMI6vNLJL-YXIFjTnE9kZc&callback=initMap"
+    async defer></script>
+
+  <script type="text/javascript">
+    function scrollto(div) {
+      $('html,body').animate(
+        {
+          scrollTop: $("#" + div).offset().top
+        }, 'slow');
+    }
+  </script>
+</head>
+
+<body onload="initMap()">
+  <header> The Arbor Collective</header>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <div id="nav">
+    <li onclick="scrollto('Home');">Home</li>
+    <li onclick="scrollto('About');">About</li>
+    <li onclick="scrollto('contact');">Contact</li>
+  </div>
+  <div class="parallax"></div>
+  <div id="Home">
+    <h1>Featured Products</h2>
+      <p>We've expanded our signature use of sustainably sourced wood and bamboo, continuing a tradition of balancing
+        style with performance for over 25 years.</p>
+      <!---Photo for product-->
+      <div class="picture-grid">
+        <div class="picture">
+          <p>Crusier</p>
+          <img src="images/cruisers.webp" alt="Description of image 1">
+          <p>We have all sort of cruiser boards</p>
+          <p>Price ranges from $139.99 - $200</p>
+        </div>
+        <div class="picture">
+          <p>Long Boards</p>
+          <img src="images/longboards.webp" alt="Description of image 2">
+          <p>We have all sort of cruiser skateboards</p>
+          <p>Price ranges from $116.99 - $229.90</p>
+        </div>
+        <div class="picture">
+          <p>Surf skate</p>
+          <img src="images/surf skate.webp" alt="Description of image 3">
+          <p>We currently have only 2 surf skate boards</p>
+          <p>Price ranges from $260- $270</p>
+        </div>
+        <div class="picture">
+          <p>Street skate</p>
+          <img src="images/street shape.webp" alt="Description of image 4">
+          <p>We have all sort of cruiser skateboards</p>
+          <p>Price ranges from $38.95 - $60</p>
+        </div>
+      </div>
+      <!---End of the product-->
+  </div>
+  <div class="parallax layer layer2"></div>
+  <div id="About">
+    <h2>About the Business</h2>
+      <p>This November, Arbor will be crossing the 25-year mark. Over the next 12 months, we will celebrate this
+        milestone with the release of limited-edition products and special content highlighting Arbor’s unique history.
+        The centerpiece will be a new documentary film, Crossing the Grain, detailing the very different journey Arbor
+        took through snowboarding and skateboarding.</p>
+      <p>We take great pride in highlighting athletes and artists who support this approach, and contribute so
+        significantly to our efforts. This mindful, more collective style ensures the planet is always considered as we
+        develop unique products for chasing life’s great lines.</p>
+      <img src="images/pic2.webp" width="25%" height="25%">
+      <br><br>
+  </div>
+  <!---Start of the Contact Page-->
+  <h1>Contact & Direction</h1>
+  <div style="display: flex;">
+    <div style="width: 50%;">
+      <div id="contact">
+        <h1>Fill the form for any questions</h1>
+        <input type="text" placeholder="Name">
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="SEND">
+      </div>
+    </div>
+    <div style="width: 50%;">
+      <button onclick="TestsFunction()">Show Direction</button>
+      <div id="TestsDiv" style="display:none">
+    
+      <div id="map" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.0218968683453!2d-118.46774033099618!3d33.979730084860485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2baa2fa78a2ad%3A0x2c1d46c1a05d2e73!2s102%20Washington%20Blvd%2C%20Venice%2C%20CA%2090292!5e0!3m2!1sen!2sus!4v1682364621519!5m2!1sen!2sus"
+          width="100%" height="100%" style="position: absolute; top: 0; left: 0; border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+    </div>
+      </div>
+  </div>
+  <div id="map">
+    <ul>
+      <ul style="list-style: none;">
+      <h2>Store Hours</h2>
+      <li>Monday: 9:00am - 6:00pm</li>
+      <li>Tuesday: 9:00am - 6:00pm</li>
+      <li>Wednesday: 9:00am - 6:00pm</li>
+      <li>Thursday: 9:00am - 6:00pm</li>
+      <li>Friday: 9:00am - 6:00pm</li>
+      <li>Saturday: 10:00am - 4:00pm</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </div>
+
+</body>
+<footer>
+<a href="https://www.facebook.com/ArborCollective/" class ="fa fa-facebook"></a>
+<a href="https://twitter.com/ArborCollective" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com/arborcollective/?hl=en"class ="fa fa-instagram"></a>
+  <a href="https://www.youtube.com/user/arborcollective"class ="fa fa-youtube"></a>
+</footer>
+
+</html>
+<!-- https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJ81__gQW4woARflh0Q0L17g4&fields=name,opening_hours&key=AIzaSyD2Fxo7Hwy07yMI6vNLJL-YXIFjTnE9kZc
+https://www.w3schools.com/howto/howto_css_parallax.asp-->

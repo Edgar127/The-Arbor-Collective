@@ -1,0 +1,173 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin:0px auto;
+ padding:0px;
+ text-align:center;
+  font-family: "Monospace";
+}
+h1,h2{
+  font-family:"Monospace";
+  color: #554949
+}
+header{
+  text-align: center;
+  font-size: 5em;
+    font-family:"Monospace";
+  color: #554949
+}
+#nav li{
+  display:inline-block;
+ margin-right:25px;
+ font-size:17px;
+ color:#084B8A;
+ font-weight:bold;
+ cursor:pointer;
+}
+#home,#about,#contact
+{
+ margin-top:100px;
+ width:90%;
+ height:400px;
+ margin-left:5%;
+ padding:50px;
+ box-sizing:border-box;
+ border-radius:10px;
+ color:black;
+}
+img {
+      display: block;
+      margin: 0 auto;
+    }
+.picture-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.picture {
+  flex-basis: calc(25% - 20px);
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+}
+
+.picture p {
+  text-align: center;
+  margin-top: 10px;
+}
+#contact input, #contact textarea {
+  font-size: 16px;
+  height: 50px;
+  padding: 10px; /* adjust padding as needed */
+  vertical-align: middle;/* or any other size you prefer */
+}
+#store-hours-container {
+  position: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #ccc;
+}
+#store-hours ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#store-hours li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #a624a8;
+  color: white;
+}
+.fa-youtube {
+  background: #ed0707;
+  color: white;
+}
+/* parralax */
+		.parallax {
+			height: 100vh;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+
+		.layer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: -1;
+		}
+
+		.layer1 {
+			background-image: url('images/img1.webp');
+			background-position: center;
+			background-size: cover;
+			animation: parallax1 10s linear infinite;
+		}
+
+		.layer2 {
+			background-image: url('images/img1.webp');
+			background-position: center;
+			background-size: cover;
+			animation: parallax2 10s linear infinite;
+		}
+
+		@keyframes parallax1 {
+			0% {
+				transform: translate3d(0, 0, 0);
+			}
+
+			100% {
+				transform: translate3d(0, -50%, 0);
+			}
+		}
+
+		@keyframes parallax2 {
+			0% {
+				transform: translate3d(0, 0, 0);
+			}
+
+			100% {
+				transform: translate3d(0, -25%, 0);
+			}
+		}
+
+
